@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" >
+    <title>title</title>
+    <link rel="stylesheet" href="css/style.css" >
+  </head>
+
+  <body>
+    <div class="nav-container">
+      <nav>
+        <a href="home.html" class="logo"
+          ><img src="img/logo.png" alt="logo" height="80"
+        ></a>
+        <div>
+          <a class="nav-link" href="home.html">Home</a>
+          <a class="nav-link active" href="index.html">Cadastrar</a>
+          <a class="nav-link" href="#">Sair</a>
+        </div>
+      </nav>
+    </div>
+    <div class="body-container">
+        <header>
+            <h1>Cadastro</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </header>
+    </div>
+    <form id='form'>
+       <div class="field-container">
+        <label for="name">Nome:</label>
+        <input required id="name" class="form-input" name="name" type="text" autofocus >
+       </div>
+       <div class="field-container">
+        <label for="birthday">Data de nascimento:</label>
+        <input 
+          required
+          class="form-input-date" 
+          name="birthday"     
+          maxlength="10"        
+          id="birthday" 
+          type="text" 
+          placeholder="99/99/9999"  
+          onkeyup="
+            var v = this.value;
+            if (v.match(/^\d{2}$/) !== null) {
+                this.value = v + '/';
+            } else if (v.match(/^\d{2}\/\d{2}$/) !== null) {
+                this.value = v + '/';
+            }" >
+       </div>
+        <fieldset>
+            <legend>Sexo:</legend>
+           <div class="options-container">
+            <div class="radio-container">
+                <input required value="female" name="gender" type="radio" id="female" >
+                <label for="female">Feminino</label>
+            </div>
+            <div class="radio-container">
+                <input required value="male" name="gender" type="radio" id="male" >
+            <label for="male">Masculino</label>
+            </div>
+           </div>
+        </fieldset>
+        <div class="field-container">
+            <label for="email">E-mail:</label>
+        <input required class="form-input" name="email" type='email' id="email">
+        </div>
+        <div class="field-container">
+            <label for="description">Descrição:</label>
+        <textarea class="form-input" name="description" id="description" ></textarea>
+        </div>
+        <div class="field-container">
+            <label for="state">Estado:</label>
+        <select class="form-input" required name="state" id="state" >
+          <option value="">Selecione um Estado</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PE">Pernambuco</option>
+          </select>
+        </div>
+         <div class="field-container">
+            <label for="city">Cidade:</label>
+            <select class="form-input" disabled required name="city" id="city">
+              <option value="">Selecione uma Estado</option>
+            </select>
+         </div>
+         <div class="button-container">
+            <button class="submit-button" type="submit">Salvar</button>
+         </div>
+    </form>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Nome
+            </th>
+            <th>
+              Data de nascimento
+            </th>
+            <th>
+              Sexo
+            </th>
+            <th>
+              E-mail
+            </th>
+            <th>
+              Descrição
+            </th>
+            <th>
+              Estado
+            </th>
+            <th>
+              Cidade
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,241 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  textarea, input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    resize: none;
+    margin: 0;
+}
+legend {
+    padding: 0;
+}
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+fieldset div {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-container {
+  width: 100vw;
+  height: 100px;
+  border-bottom: 1px solid #8e4f9e;
+}
+
+.nav-container nav {
+  margin: 0 100px;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.nav-container nav div {
+  margin: 0 150px;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #8e4f9e;
+  font-size: larger;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.active:hover {
+    opacity: 0.7;
+}
+
+.nav-link:not(.active):hover {
+    background-color: #e8dcec;
+}
+
+.active {
+  background-color: #8e4f9e;
+  color: white;
+}
+
+.logo {
+  padding: 10px;
+}
+
+
+
+.body-container {
+    margin: 0 100px;
+}
+
+header {
+    text-align: justify;
+}
+
+header h1 {
+    color: #8e4f9e;
+    font-weight: 500;
+}
+
+header p {
+    color: #AFAFAF
+}
+
+form {
+    margin: 0 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form input, form select {
+    height: 30px;
+    border: 1px solid #8e4f9e;
+    background-color: #D0C5FB;
+}
+
+form textarea {
+    height: 90px;
+    border: 1px solid #8e4f9e;
+    background-color: #D0C5FB;
+}
+
+form label, fieldset legend {
+    color:  #8e4f9e;
+}
+
+form .field-container, form fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.form-input {
+    width: 50%;
+    background-color: #dfdfdf;
+    outline: none;
+}
+
+.form-input-date {
+    width: max-content;
+    background-color: #dfdfdf;
+
+}
+
+.form-input-date::placeholder {
+    color: black
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.radio-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+}
+
+.radio-container input{
+    cursor: pointer;
+}
+
+.radio-container label{
+    cursor: pointer;
+}
+
+input[tyoe='radio'] {
+    accent-color: black;
+}
+
+button[type='submit'] {
+    background-color: #8e4f9e;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    font-size: 16px;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    
+}
+
+button[type='submit']:hover {
+    opacity: 0.9;
+}
+
+.table-container {
+    margin: 40px 100px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    border-top: 1px solid #AFAFAF;
+    border-bottom: 1px solid #AFAFAF;
+}
+
+th {
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #dfdfdf;
+}
+
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: 4px;
+    left: -5px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #AFAFAF;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: 4px;
+    left: -5px;
+    position: relative;
+    background-color: #8e4f9e;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #AFAFAF;
+}
+
